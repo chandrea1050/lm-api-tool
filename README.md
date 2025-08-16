@@ -16,7 +16,7 @@ Supports both CLI and a Streamlit browser UI. Uses the OpenAI Responses API for 
 - Offline mode (no API key required) using a heuristic extractor
  - In-session memory: chat context persists during the session to guide extraction and scoring; de-duplicated and clearable
 
-## Prereqs
+## Prerequirements
 
 - Python 3.9+
 - An OpenAI API key set in your environment
@@ -68,7 +68,7 @@ Environment variables:
 - `OPENAI_MODEL` (optional; CLI `--model` overrides; UI defaults to `gpt-5-2025-08-07` if unset)
 - Use `--offline` or the UI toggle to run without an API key
 
-## How it works
+## How it Works
 
 Two entry points share the same core logic:
 
@@ -96,33 +96,13 @@ Deal-type nuance:
 - NEAR MATCH when not exact but adjacent via synonyms (e.g., buyout ≈ LBO/control/majority; growth ≈ growth equity/minority; roll-up ≈ buy-and-build/add-on/platform; etc.). NEAR MATCH contributes 0 for determinism but is called out in the explanation.
 - MISMATCH when neither exact nor adjacent.
 
-## Notes on models and the agentic API
+## Notes on Models and the Agentic API
 
 - Uses the OpenAI Responses API as the core agentic primitive (a modern alternative to chat-only calls).
 - Temperature kept low for determinism.
 - You can override the model with CLI `--model` or `OPENAI_MODEL`; the UI’s default is `gpt-5-2025-08-07`.
 
-## Limitations & challenges
-
-- Website parsing is basic; tricky pages (heavy JS, gated content) may yield sparse text.
-- Industry/size inference is heuristic and depends on the content available.
-- The PE dataset is a small sample and not comprehensive; for production you’d:
-  - Back-fill with a real database/CRM of buyers and mandates
-  - Normalize industries (e.g., NAICS/SIC mapping)
-  - Add richer financial ranges and deal preferences
- - NEAR MATCH currently does not add score (by design for predictability); you may choose to award fractional credit.
-
-## If I had more time
-
-- Add multi-page crawling (About, Products, Careers) with rate limits and robots.txt compliance
-- Enrich with company data APIs (e.g., Clearbit, Crunchbase) where allowed
-- Expand dataset and implement a proper scoring model with learned weights
-- Add evaluation harness + unit tests for the extractor and ranker
-- Add caching (file or Redis) for fetched pages and model outputs
-- Expand synonyms/taxonomy for deal types and industries
-- Add a sidebar control to set desired deal type and weights
-
-## Repository layout
+## Repository Layout
 
 - `llm_pe_matcher/` — Python package (agent, CLI, tools)
   - `agent.py` — orchestrates extraction (Responses API) and scoring
@@ -132,7 +112,7 @@ Deal-type nuance:
 - `streamlit_app.py` — Browser UI for analysis and visualization
 - `requirements.txt` — Python dependencies
 
-## Example output (truncated)
+## Example Output (truncated)
 
 ```json
 {
@@ -172,7 +152,7 @@ Deal-type nuance:
 }
 ```
 
-## UI walkthrough
+## UI Walkthrough
 
 The Streamlit UI renders the pipeline into scannable sections:
 
@@ -231,7 +211,7 @@ Factor weights and contribution math are applied locally, so results are reprodu
 - Some sites block automated fetches; try another URL.
  - If the UI seems to repeat your context, use the Clear chat button; the app already deduplicates notes on Analyze.
 
-## Recent updates
+## Recent Updates
 
 - Switched extraction pipeline to the OpenAI Responses API
 - Added Streamlit UI with Purpose and a single Summary section (moved from per-fund expanders)
@@ -240,3 +220,4 @@ Factor weights and contribution math are applied locally, so results are reprodu
 - Prevented duplicate context in chat; removed posting the final summary to chat
 - Expanded demo dataset with more funds and richer offerings
  - Added a comprehensive technical spec: see docs/TECH_SPEC.md
+
