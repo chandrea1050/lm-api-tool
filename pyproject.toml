@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-pe-matcher"
+version = "0.1.0"
+description = "SMB → PE fund matcher prototype using OpenAI agentic tool-calling"
+authors = [{ name = "Demo" }]
+requires-python = ">=3.9"
+dependencies = [
+    "openai>=1.35.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "beautifulsoup4>=4.12.3",
+    "pydantic>=2.7.0",
+    "rich>=13.7.1",
+]
+
+[project.scripts]
+pe-match = "llm_pe_matcher.cli:main"

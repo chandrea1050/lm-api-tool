@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Main Street Equity Partners",
+    "regions": ["US"],
+    "industries": ["Business Services", "Industrial", "Consumer"],
+    "check_size_usd": {"min": 10000000, "max": 75000000},
+    "revenue_focus_usd": {"min": 10000000, "max": 150000000},
+    "employee_focus": {"min": 20, "max": 1000},
+    "deal_types": ["Buyout", "Majority", "Recap"],
+    "notes": "Lower middle market focus across North America"
+  },
+  {
+    "name": "BlueLake Industrials",
+    "regions": ["US", "Canada"],
+    "industries": ["Industrial", "Manufacturing", "Aerospace & Defense"],
+    "check_size_usd": {"min": 15000000, "max": 100000000},
+    "revenue_focus_usd": {"min": 20000000, "max": 300000000},
+    "employee_focus": {"min": 50, "max": 2000},
+    "deal_types": ["Buyout", "Carve-out"],
+    "notes": "Industrial specialization; operational value-add"
+  },
+  {
+    "name": "RiverNorth Growth Partners",
+    "regions": ["US"],
+    "industries": ["Software", "Tech-enabled Services"],
+    "check_size_usd": {"min": 5000000, "max": 40000000},
+    "revenue_focus_usd": {"min": 5000000, "max": 80000000},
+    "employee_focus": {"min": 10, "max": 500},
+    "deal_types": ["Minority", "Growth"],
+    "notes": "Growth equity for SMB SaaS and services"
+  },
+  {
+    "name": "Harbor Consumer Capital",
+    "regions": ["US", "Europe"],
+    "industries": ["Consumer", "E-commerce", "Food & Beverage"],
+    "check_size_usd": {"min": 10000000, "max": 60000000},
+    "revenue_focus_usd": {"min": 15000000, "max": 200000000},
+    "employee_focus": {"min": 25, "max": 1500},
+    "deal_types": ["Buyout", "Majority"],
+    "notes": "Consumer brands and omnichannel retail"
+  },
+  {
+    "name": "Summit Healthcare Partners",
+    "regions": ["US"],
+    "industries": ["Healthcare", "Life Sciences"],
+    "check_size_usd": {"min": 20000000, "max": 120000000},
+    "revenue_focus_usd": {"min": 30000000, "max": 500000000},
+    "employee_focus": {"min": 50, "max": 3000},
+    "deal_types": ["Buyout", "Majority", "Roll-up"],
+    "notes": "Provider services, devices, and diagnostics"
+  },
+  {
+    "name": "Atlas Tech Capital",
+    "regions": ["US", "Europe"],
+    "industries": ["Software", "Cybersecurity", "Data & Analytics"],
+    "check_size_usd": {"min": 15000000, "max": 90000000},
+    "revenue_focus_usd": {"min": 10000000, "max": 200000000},
+    "employee_focus": {"min": 25, "max": 1500},
+    "deal_types": ["Buyout", "Majority", "Growth"],
+    "notes": "Control and significant minority in B2B software and security"
+  },
+  {
+    "name": "Cedar Ridge Partners",
+    "regions": ["US", "Canada"],
+    "industries": ["Business Services", "Facilities Management", "Environmental Services"],
+    "check_size_usd": {"min": 8000000, "max": 60000000},
+    "revenue_focus_usd": {"min": 8000000, "max": 150000000},
+    "employee_focus": {"min": 30, "max": 1200},
+    "deal_types": ["Buyout", "Carve-out", "Recap"],
+    "notes": "Service-heavy LMM with operational improvement focus"
+  },
+  {
+    "name": "NorthPeak Industrial Partners",
+    "regions": ["US"],
+    "industries": ["Industrial", "Manufacturing", "Distribution"],
+    "check_size_usd": {"min": 20000000, "max": 150000000},
+    "revenue_focus_usd": {"min": 30000000, "max": 400000000},
+    "employee_focus": {"min": 100, "max": 3500},
+    "deal_types": ["Buyout", "Roll-up"],
+    "notes": "Thematic roll-ups in niche industrials and supply chain"
+  },
+  {
+    "name": "Helios Consumer Growth",
+    "regions": ["US", "Europe"],
+    "industries": ["Consumer", "Health & Wellness", "Beauty"],
+    "check_size_usd": {"min": 5000000, "max": 50000000},
+    "revenue_focus_usd": {"min": 5000000, "max": 120000000},
+    "employee_focus": {"min": 15, "max": 800},
+    "deal_types": ["Minority", "Growth", "Majority"],
+    "notes": "Growth equity and control in emerging consumer brands"
+  },
+  {
+    "name": "Vertex HealthTech Partners",
+    "regions": ["US"],
+    "industries": ["Healthcare IT", "Software", "Tech-enabled Services"],
+    "check_size_usd": {"min": 7000000, "max": 70000000},
+    "revenue_focus_usd": {"min": 7000000, "max": 150000000},
+    "employee_focus": {"min": 20, "max": 1200},
+    "deal_types": ["Growth", "Minority", "Majority"],
+    "notes": "Thesis-driven in healthcare SaaS and services enablement"
+  }
+]
